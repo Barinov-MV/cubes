@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div id="controls">
+            <div id="buttons">
+                <button data-btn="addBtn"></button>
+                <button data-btn="removeBtn"></button>
+            </div>
+            <fieldset id="flexContainerProps">
+                <legend>Flex Container Props</legend>
+                <label for="flexDirection">flex-direction</label>
+                <select id="flexDirection">
+                    <option value="row" selected>row</option>
+                    <option value="row-reverse">row-reverse</option>
+                    <option value="column">column</option>
+                    <option value="column-reverse">column-reverse</option>
+                </select>
+
+                <label for="flexWrap">flex-wrap</label>
+                <select id="flexWrap">
+                    <option value="nowrap">nowrap</option>
+                    <option value="wrap" selected>wrap</option>
+                    <option value="wrap-reverse">wrap-reverse</option>
+                </select>
+				
+                <label for="justifyContent">justify-content</label>
+                <select id="justifyContent">
+                    <option value="flex-start">flex-start</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="center" selected>center</option>
+                    <option value="space-between">space-between</option>
+                    <option value="space-around">space-around</option>
+                    <option value="space-evenly">space-evenly</option>
+                </select>
+				
+                <label for="alignItems">align-items</label>
+                <select id="alignItems">
+                    <option value="flex-start">flex-start</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="center" selected>center</option>
+                    <option value="stretch">stretch</option>
+                    <option value="baseline">baseline</option>
+                </select>
+				
+                <label for="alignContent">align-content</label>
+                <select id="alignContent">
+                    <option value="flex-start" selected>flex-start</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="center">center</option>
+                    <option value="stretch">stretch</option>
+                    <option value="space-between">space-between</option>
+                    <option value="space-around">space-around</option>
+                    <option value="space-evenly">space-evenly</option>
+                </select>
+            </fieldset>
+			
+            <fieldset id="flexItemProps">
+                <legend>Flex Item Props</legend>
+                <label for="order">order</label>
+                <input id="order" type="number" min="-5" max="5" step="1" value="0" />
+				
+                <label for="flexGrow">flex-grow</label>
+                <input id="flexGrow" type="number" min="0" max="5" step="1" value="0" />
+				
+                <label for="flexShrink">flex-shrink</label>
+                <input id="flexShrink" type="number" min="1" max="6" step="1" value="1" />
+				
+                <label for="alignSelf">align-self</label>
+                <select id="alignSelf">
+                    <option value="auto" selected>auto</option>
+                    <option value="flex-start">flex-start</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="center">center</option>
+                    <option value="stretch">stretch</option>
+                    <option value="baseline">baseline</option>
+                </select>
+            </fieldset>
+        </div>
+		
+        <div id="flexContainer">
+            <div class="flex-item selected">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+            <div class="flex-item">4</div>
+            <div class="flex-item">5</div>
+            <div class="flex-item">6</div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
